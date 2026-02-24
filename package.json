@@ -1,0 +1,31 @@
+{
+  "name": "yemars-tech",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/image": "^1.11.0",
+    "@nuxt/schema": "^4.3.0",
+    "@nuxtjs/google-fonts": "^3.1.3",
+    "@nuxtjs/sitemap": "^5.1.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@types/node": "^25.3.0",
+    "nuxt": "^3.10.0",
+    "nuxt-gtag": "^2.0.0"
+  },
+  "dependencies": {
+    "@nuxtjs/robots": "^5.7.0",
+    "@vee-validate/zod": "^4.15.0",
+    "axios": "^1.13.5",
+    "nuxt-site-config": "^3.2.20",
+    "resend": "^6.9.2",
+    "vee-validate": "^4.15.0",
+    "zod": "^3.24.0"
+  }
+}
