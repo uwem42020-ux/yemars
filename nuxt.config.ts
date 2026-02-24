@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     'nuxt-gtag',
     '@nuxt/image',
-    'nuxt-site-config' // Added missing module
+    'nuxt-site-config'
   ],
 
   compatibilityDate: '2026-02-07',
@@ -135,46 +135,39 @@ export default defineNuxtConfig({
     }
   },
 
-  // Sitemap configuration
+  // Sitemap configuration - FINAL FIX (using 'urls')
   sitemap: {
     exclude: [
       '/admin/**',
       '/api/**',
       '/_nuxt/**'
     ],
-    defaults: {
-      changefreq: 'weekly',
-      priority: 0.7,
-      lastmod: new Date().toISOString()
-    },
-    urls: async () => {
-      return [
-        '/',
-        '/about',
-        '/contact',
-        '/pricing',
-        '/services-index',
-        '/services/corporate-app',
-        '/services/ecommerce-systems',
-        '/services/premium-web-apps',
-        '/services/mobile-applications',
-        '/services/app-maintenance',
-        '/services/fintech-app',
-        '/services/graphic-design',
-        '/services/networking',
-        '/services/printing',
-        '/services/social-media-management'
-      ]
-    }
+    urls: [  // Changed to 'urls' - this is the correct property
+      '/',
+      '/about',
+      '/contact',
+      '/pricing',
+      '/services-index',
+      '/services/corporate-app',
+      '/services/ecommerce-systems',
+      '/services/premium-web-apps',
+      '/services/mobile-applications',
+      '/services/app-maintenance',
+      '/services/fintech-app',
+      '/services/graphic-design',
+      '/services/networking',
+      '/services/printing',
+      '/services/social-media-management'
+    ]
   },
 
-  // Robots.txt configuration - FIXED: Removed '/_nuxt/' from disallow
+  // Robots.txt configuration
   robots: {
     groups: [
       {
         userAgent: '*',
         allow: ['/'],
-        disallow: ['/api/', '/admin/'] // Removed '/_nuxt/' - this was causing warnings
+        disallow: ['/api/', '/admin/']
       }
     ],
     sitemap: 'https://yemars.ng/sitemap.xml'
@@ -186,23 +179,19 @@ export default defineNuxtConfig({
     name: 'Yemars Technology Nigeria',
     description: 'Professional web development, app development, graphic design, and digital marketing services in Abuja, Nigeria.',
     defaultLocale: 'en-NG',
-    indexable: true // Ensures site is indexed
+    indexable: true
   },
 
-  // Runtime config with your Resend configuration
+  // Runtime config
   runtimeConfig: {
-    // Private keys (only available server-side)
     resendApiKey: process.env.RESEND_API_KEY,
     fromEmail: process.env.FROM_EMAIL,
     toEmail: process.env.TO_EMAIL,
     appName: process.env.APP_NAME || 'yemars tech',
-    
-    // Rate limiting - As strings (runtimeConfig expects strings)
     rateLimitMax: process.env.RATE_LIMIT_MAX || '15',
     rateLimitWindow: process.env.RATE_LIMIT_WINDOW || '3600',
     
     public: {
-      // Public keys (available client-side)
       siteUrl: process.env.APP_URL || 'https://yemars.ng',
       siteName: 'Yemars Technology Nigeria',
       siteDescription: 'Professional web development, app development, graphic design, and digital marketing services in Abuja, Nigeria.',
@@ -216,7 +205,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // Route rules - Redirect /services to /services-index
+  // Route rules
   routeRules: {
     '/services': {
       redirect: {
