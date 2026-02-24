@@ -135,10 +135,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // Sitemap configuration - ZERO CONFIG (recommended)
-  sitemap: {
-    // Empty - let the module auto-discover everything
-  },
+  // Sitemap configuration - COMPLETELY REMOVED
 
   // Robots.txt configuration
   robots: {
