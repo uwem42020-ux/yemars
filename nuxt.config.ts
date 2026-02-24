@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/robots',
-    '@nuxtjs/sitemap',
     '@nuxtjs/google-fonts',
     'nuxt-gtag',
     '@nuxt/image',
@@ -134,8 +133,6 @@ export default defineNuxtConfig({
       ]
     }
   },
-
-  // Sitemap configuration - COMPLETELY REMOVED
 
   // Robots.txt configuration
   robots: {
