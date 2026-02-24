@@ -135,30 +135,9 @@ export default defineNuxtConfig({
     }
   },
 
-  // Sitemap configuration - FINAL FIX (using 'urls')
+  // Sitemap configuration - ZERO CONFIG (recommended)
   sitemap: {
-    exclude: [
-      '/admin/**',
-      '/api/**',
-      '/_nuxt/**'
-    ],
-    urls: [  // Changed to 'urls' - this is the correct property
-      '/',
-      '/about',
-      '/contact',
-      '/pricing',
-      '/services-index',
-      '/services/corporate-app',
-      '/services/ecommerce-systems',
-      '/services/premium-web-apps',
-      '/services/mobile-applications',
-      '/services/app-maintenance',
-      '/services/fintech-app',
-      '/services/graphic-design',
-      '/services/networking',
-      '/services/printing',
-      '/services/social-media-management'
-    ]
+    // Empty - let the module auto-discover everything
   },
 
   // Robots.txt configuration
