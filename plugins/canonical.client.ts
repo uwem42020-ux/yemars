@@ -1,4 +1,4 @@
-import { useHead, useRoute, useRuntimeConfig } from '#imports'
+import { defineNuxtPlugin, useHead, useRoute, useRuntimeConfig } from '#app'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
@@ -20,5 +20,4 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   nuxtApp.hook('page:finish', updateCanonical)
   updateCanonical()
-}
-)
+})
