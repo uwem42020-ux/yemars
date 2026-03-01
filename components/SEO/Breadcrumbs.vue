@@ -1,5 +1,5 @@
 <template>
-  <SEOJsonLd type="BreadcrumbList" :data="breadcrumbData" />
+  <JsonLd type="BreadcrumbList" :data="breadcrumbData" />
 </template>
 
 <script setup>

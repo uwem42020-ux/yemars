@@ -125,11 +125,12 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#0055FF' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: '/favicon.png?v=20260301' },
+        { rel: 'shortcut icon', href: '/favicon.ico?v=20260301' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/logo.png?v=20260301' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
-        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' },
-        { rel: 'canonical', href: 'https://yemars.ng' }
+        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' }
       ]
     }
   },

@@ -1,5 +1,5 @@
 <template>
-  <SEOJsonLd type="LocalBusiness" :data="businessData" />
+  <JsonLd type="LocalBusiness" :data="businessData" />
 </template>
 
 <script setup>

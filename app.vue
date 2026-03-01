@@ -8,6 +8,7 @@
     <Footer />
     
     <!-- SEO Components -->
+    <WebSite />
     <LocalBusiness :page-type="getPageType()" />
     <Breadcrumbs v-if="breadcrumbItems.length" :items="breadcrumbItems" />
     
@@ -42,6 +43,7 @@ import { useRoute, useRouter } from 'vue-router'
 import Loader from '~/components/Loader.vue'
 import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
+import WebSite from '~/components/SEO/WebSite.vue'
 import LocalBusiness from '~/components/SEO/LocalBusiness.vue'
 import Breadcrumbs from '~/components/SEO/Breadcrumbs.vue'
 

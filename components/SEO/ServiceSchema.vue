@@ -1,5 +1,5 @@
 <template>
-  <SEOJsonLd type="Service" :data="serviceData" />
+  <JsonLd type="Service" :data="serviceData" />
 </template>
 
 <script setup>
