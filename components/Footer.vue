@@ -4,7 +4,7 @@
     <div class="footer-widgets">
       <div class="container">
         <div class="row">
-          <!-- Company Info -->
+          <!-- Company Info with Contact Details -->
           <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
             <div class="yemars-footer-widget">
               <div class="yemars-footer-logo">
@@ -15,6 +15,25 @@
               <div class="yemars-footer-text">
                 <p>Take your business to the next level with professional web solutions designed for the Nigerian market.</p>
               </div>
+
+              <!-- Contact Info: Address, Phone, WhatsApp -->
+              <div class="footer-contact-info">
+                <div class="contact-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>D Pauli, Odili Cluster, River Park Estate, Abuja, Nigeria</span>
+                </div>
+                <div class="contact-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <a href="tel:+2349014488190">+234 901 448 8190</a>
+                  <span class="contact-label">(Call)</span>
+                </div>
+                <div class="contact-item">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <a href="https://wa.me/2348038887589" target="_blank" rel="noopener noreferrer">+234 803 888 7589</a>
+                  <span class="contact-label">(WhatsApp)</span>
+                </div>
+              </div>
+
               <div class="yemars-footer-social">
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -160,6 +179,52 @@ const subscribeNewsletter = () => {
   line-height: 1.8;
   margin-bottom: 20px;
   font-size: 14px;
+}
+
+/* Contact Info Styles */
+.footer-contact-info {
+  margin: 20px 0 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.contact-item i {
+  width: 20px;
+  font-size: 16px;
+  color: #ccc;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.contact-item a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #0055FF;
+}
+
+.contact-label {
+  font-size: 12px;
+  opacity: 0.8;
+  color: #aaa;
+  margin-left: 2px;
+}
+
+/* Keep address text consistent */
+.contact-item span:not(.contact-label) {
+  color: #ccc;
 }
 
 .yemars-footer-social {
@@ -382,12 +447,22 @@ const subscribeNewsletter = () => {
   }
   
   .yemars-footer-list ul li a {
-    font-size: 13px; /* Slightly smaller text on very small screens */
+    font-size: 13px;
   }
   
   .yemars-footer-widget h4 {
     font-size: 16px;
     margin-bottom: 20px;
+  }
+  
+  .contact-item {
+    font-size: 13px;
+    gap: 10px;
+  }
+  
+  .contact-item i {
+    font-size: 14px;
+    width: 18px;
   }
 }
 
