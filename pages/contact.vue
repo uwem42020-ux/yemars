@@ -41,14 +41,30 @@
               <h2>Contact Information</h2>
               <p class="info-subtitle">Reach out through any of these channels</p>
               
-              <!-- Office Location -->
+              <!-- Office Location (Updated) -->
               <div class="info-item">
                 <div class="info-icon">
                   <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
                 </div>
                 <div class="info-content">
                   <h3>Visit Our Office</h3>
-                  <p>Shop E35 Murg Plaza, Area 10 UTC<br>Abuja, Nigeria</p>
+                  <p>D Pauli, Odili Cluster, River Park Estate<br>Abuja, Nigeria</p>
+                </div>
+              </div>
+              
+              <!-- Phone & WhatsApp (New) -->
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Call or WhatsApp</h3>
+                  <p>
+                    <a href="tel:+2349014488190">+234 901 448 8190</a> (Call)
+                  </p>
+                  <p>
+                    <a href="https://wa.me/2348038887589" target="_blank" rel="noopener noreferrer">+234 803 888 7589</a> (WhatsApp)
+                  </p>
                 </div>
               </div>
               
@@ -82,8 +98,8 @@
                 <span>Typically responds within 2 hours during business hours</span>
               </div>
               
-              <!-- Map Link -->
-              <a href="https://maps.google.com/?q=Shop+E35+Murg+Plaza+Area+10+Abuja" target="_blank" rel="noopener noreferrer" class="map-link">
+              <!-- Map Link (Updated) -->
+              <a href="https://maps.google.com/?q=D+Pauli,+Odili+Cluster,+River+Park+Estate,+Abuja,+Nigeria" target="_blank" rel="noopener noreferrer" class="map-link">
                 <i class="fa-solid fa-map" aria-hidden="true"></i>
                 Open in Google Maps
               </a>
@@ -259,28 +275,28 @@
       </div>
     </section>
 
-    <!-- Map Section -->
+    <!-- Map Section (Updated) -->
     <section class="map-section">
       <div class="container">
         <div class="map-card">
           <div class="map-header">
             <h2>Find Us in Abuja</h2>
-            <p>Shop E35 Murg Plaza, Area 10 UTC, Abuja</p>
+            <p>D Pauli, Odili Cluster, River Park Estate, Abuja</p>
           </div>
           <div class="map-container">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.836598528591!2d7.495388!3d9.064478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b2b2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sArea%2010%2C%20Abuja!5e0!3m2!1sen!2sng!4v1620000000000!5m2!1sen!2sng" 
+              src="https://www.google.com/maps?q=D+Pauli+Odili+Cluster+River+Park+Estate+Abuja+Nigeria&output=embed"
               width="100%" 
               height="450" 
               style="border:0;" 
               allowfullscreen="" 
               loading="lazy"
-              title="Yemars Technology Location in Abuja"
+              title="Yemars Technology Location - River Park Estate, Abuja"
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
           <div class="map-directions">
-            <a href="https://maps.google.com/?q=Shop+E35+Murg+Plaza+Area+10+Abuja" target="_blank" rel="noopener noreferrer" class="directions-btn">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=D+Pauli,+Odili+Cluster,+River+Park+Estate,+Abuja,+Nigeria" target="_blank" rel="noopener noreferrer" class="directions-btn">
               <i class="fa-solid fa-location-arrow" aria-hidden="true"></i>
               Get Directions
             </a>
@@ -330,18 +346,18 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
 
-// SEO Meta Tags
+// SEO Meta Tags (Updated with new address and phone)
 useSeoMeta({
   title: 'Contact Us - Yemars Technology Nigeria | Web Development & Digital Solutions Abuja',
-  description: 'Contact Yemars Technology in Abuja for web development, app development, graphic design, and digital marketing services. Visit our office at Shop E35 Murg Plaza, Area 10 UTC, Abuja. Email: info@yemars.ng',
+  description: 'Contact Yemars Technology in Abuja for web development, app development, and digital marketing services. Visit our office at D Pauli, Odili Cluster, River Park Estate, Abuja. Call +2349014488190 or WhatsApp +2348038887589. Email: info@yemars.ng',
   ogTitle: 'Contact Yemars Technology Nigeria - Get in Touch',
-  ogDescription: 'Reach out to Abuja\'s leading web development company. We respond within 24 hours. Visit our office or send us a message.',
+  ogDescription: 'Reach out to Abuja\'s leading web development company. Call, WhatsApp, or visit our office at River Park Estate. We respond within 24 hours.',
   ogImage: '/og-image-contact.jpg',
   ogUrl: 'https://yemars.ng/contact',
   twitterTitle: 'Contact Yemars Technology Nigeria',
   twitterDescription: 'Get in touch with our team for your web development, app development, or digital marketing project.',
   twitterImage: '/twitter-image-contact.jpg',
-  keywords: 'contact web developers Abuja, tech company contact Nigeria, Yemars Technology address, web design company Abuja contact, app development Nigeria contact, digital marketing agency Abuja phone, graphic design services Nigeria email, IT company Abuja location, web development Nigeria contact, Abuja tech support'
+  keywords: 'contact web developers Abuja, tech company contact Nigeria, Yemars Technology address, web design company Abuja contact, app development Nigeria contact, digital marketing agency Abuja phone, River Park Estate Abuja'
 })
 
 const route = useRoute()
@@ -470,7 +486,7 @@ const faqs = [
   },
   {
     q: 'Can I visit your office?',
-    a: 'Yes! We\'re located at Shop E35 Murg Plaza, Area 10 UTC, Abuja. It\'s best to schedule an appointment first so we can dedicate time to discuss your project.'
+    a: 'Yes! We\'re located at D Pauli, Odili Cluster, River Park Estate, Abuja. It\'s best to schedule an appointment first so we can dedicate time to discuss your project.'
   },
   {
     q: 'Do you work with clients outside Abuja?',
@@ -634,6 +650,7 @@ const faqs = [
   color: #666;
   font-size: 14px;
   line-height: 1.6;
+  margin-bottom: 5px;
 }
 
 .info-content a {
