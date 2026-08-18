@@ -908,7 +908,6 @@ const handleLeadSubmitted = (data) => {
   display: inline-block;
 }
 
-/* Force hero heading lines to stay together */
 .main-heading6 h1 .split-line.first-line,
 .main-heading6 h1 .split-line.second-line,
 .main-heading6 h1 .split-line.third-line {
@@ -999,27 +998,6 @@ const handleLeadSubmitted = (data) => {
 .theme-btn14:hover {
   border-color: white;
   transform: translateY(-2px);
-}
-
-.theme-btn14 .arrow1,
-.theme-btn14 .arrow2 {
-  transition: all 0.3s ease;
-}
-
-.theme-btn14 .arrow2 {
-  position: absolute;
-  right: 35px;
-  opacity: 0;
-}
-
-.theme-btn14:hover .arrow1 {
-  transform: translateX(-10px);
-  opacity: 0;
-}
-
-.theme-btn14:hover .arrow2 {
-  right: 30px;
-  opacity: 1;
 }
 
 .hero6-images {
@@ -1215,7 +1193,6 @@ const handleLeadSubmitted = (data) => {
   margin-right: 8px;
 }
 
-/* About heading - force two lines */
 .about-heading .first-about-line,
 .about-heading .second-about-line {
   white-space: nowrap;
@@ -1957,7 +1934,6 @@ const handleLeadSubmitted = (data) => {
     font-size: 32px;
   }
   
-  /* Force hero heading lines to stay together on mobile */
   .main-heading6 h1 .split-line.first-line,
   .main-heading6 h1 .split-line.second-line,
   .main-heading6 h1 .split-line.third-line {
@@ -1972,7 +1948,6 @@ const handleLeadSubmitted = (data) => {
     display: inline-block;
   }
   
-  /* Force about heading to stay as two lines on mobile */
   .about-heading .first-about-line,
   .about-heading .second-about-line {
     white-space: nowrap;

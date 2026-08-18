@@ -1,0 +1,16 @@
+# Yemars Technology Nigeria - Robots.txt
+# https://yemars.ng
+
+User-agent: *
+Allow: /
+
+# Block internal API routes
+Disallow: /api/
+Disallow: /_nuxt/
+Disallow: /admin
+
+# Block staging/deploy previews
+Disallow: /*--*
+
+# Sitemap locations
+Sitemap: https://yemars.ng/sitemap.xml

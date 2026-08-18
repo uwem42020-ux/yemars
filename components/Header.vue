@@ -6,7 +6,6 @@
           <div class="col-lg-2 col-md-6 col-6">
             <div class="yemars-logo">
               <NuxtLink to="/" class="header-logo-block">
-                <!-- Switch logo based on scroll position -->
                 <img 
                   :src="isSticky ? '/logo2.png' : '/logo.png'" 
                   :alt="isSticky ? 'Yemars Technology Logo Dark' : 'Yemars Technology Logo White'"
@@ -32,7 +31,6 @@
                     <div class="mega-menu-wrapper">
                       <div class="mega-menu-container">
                         <ul class="sub-menu mega-menu">
-                          <!-- App & Web Development Column -->
                           <li class="mega-menu-column">
                             <span class="mega-menu-title">App & Web Development</span>
                             <ul class="mega-sub-menu">
@@ -45,7 +43,6 @@
                             </ul>
                           </li>
                           
-                          <!-- Graphic Design Column -->
                           <li class="mega-menu-column">
                             <span class="mega-menu-title">Graphic Design</span>
                             <ul class="mega-sub-menu">
@@ -58,7 +55,6 @@
                             </ul>
                           </li>
                           
-                          <!-- Networking Column -->
                           <li class="mega-menu-column">
                             <span class="mega-menu-title">Networking</span>
                             <ul class="mega-sub-menu">
@@ -71,7 +67,6 @@
                             </ul>
                           </li>
                           
-                          <!-- Printing Column -->
                           <li class="mega-menu-column">
                             <span class="mega-menu-title">Printing</span>
                             <ul class="mega-sub-menu">
@@ -84,7 +79,6 @@
                             </ul>
                           </li>
                           
-                          <!-- Social Media Column -->
                           <li class="mega-menu-column">
                             <span class="mega-menu-title">Social Media</span>
                             <ul class="mega-sub-menu">
@@ -116,8 +110,26 @@
           </div>
           
           <div class="col-lg-3 col-md-6 col-6">
-            <div class="yemars-header-btn text-end d-none d-lg-block">
-              <!-- Changed to link to domain section on homepage -->
+            <div class="yemars-header-btn text-end d-none d-lg-block" style="display: flex; align-items: center; gap: 10px; justify-content: flex-end;">
+              <!-- Admin Login/Logout Button -->
+              <NuxtLink 
+                v-if="!isLoggedIn" 
+                to="/admin/login" 
+                class="admin-login-btn"
+              >
+                <i class="fa-solid fa-lock"></i>
+                Admin
+              </NuxtLink>
+              
+              <button 
+                v-else 
+                @click="logout" 
+                class="admin-logout-btn"
+              >
+                <i class="fa-solid fa-sign-out-alt"></i>
+                Logout
+              </button>
+              
               <a href="/#domain-section" class="theme-btn13">
                 Get Started <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span>
                 <span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span>
@@ -156,15 +168,12 @@
                 <NuxtLink to="/" @click="toggleMobileMenu">Home</NuxtLink>
               </li>
               
-              <!-- Mobile Services Dropdown -->
               <li class="has-dropdown">
                 <a href="javascript:void(0)" class="dropdown-toggle" @click="toggleDropdown($event)">
                   Services <span class="dropdown-arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </a>
                 
-                <!-- Mobile Mega Menu -->
                 <ul class="sub-menu mobile-mega" style="display: none;">
-                  <!-- App & Web Development -->
                   <li class="mobile-mega-section">
                     <span class="mobile-mega-title">App & Web Development</span>
                     <ul class="mobile-mega-sub">
@@ -177,7 +186,6 @@
                     </ul>
                   </li>
                   
-                  <!-- Graphic Design -->
                   <li class="mobile-mega-section">
                     <span class="mobile-mega-title">Graphic Design</span>
                     <ul class="mobile-mega-sub">
@@ -190,7 +198,6 @@
                     </ul>
                   </li>
                   
-                  <!-- Networking -->
                   <li class="mobile-mega-section">
                     <span class="mobile-mega-title">Networking</span>
                     <ul class="mobile-mega-sub">
@@ -203,7 +210,6 @@
                     </ul>
                   </li>
                   
-                  <!-- Printing -->
                   <li class="mobile-mega-section">
                     <span class="mobile-mega-title">Printing</span>
                     <ul class="mobile-mega-sub">
@@ -216,7 +222,6 @@
                     </ul>
                   </li>
                   
-                  <!-- Social Media -->
                   <li class="mobile-mega-section">
                     <span class="mobile-mega-title">Social Media</span>
                     <ul class="mobile-mega-sub">
@@ -242,6 +247,14 @@
               </li>
               <li>
                 <a href="/#domain-section" class="mobile-cta" @click="toggleMobileMenu">Get Started</a>
+              </li>
+              <li>
+                <NuxtLink v-if="!isLoggedIn" to="/admin/login" @click="toggleMobileMenu" class="mobile-admin-link">
+                  <i class="fa-solid fa-lock"></i> Admin Login
+                </NuxtLink>
+                <a v-else href="javascript:void(0)" @click="logout" class="mobile-admin-link">
+                  <i class="fa-solid fa-sign-out-alt"></i> Logout
+                </a>
               </li>
             </ul>
           </nav>
@@ -278,10 +291,37 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
 
 const route = useRoute()
+const router = useRouter()
+const supabase = useSupabaseClient()
+
 const mobileMenuOpen = ref(false)
 const isSticky = ref(false)
+const isLoggedIn = ref(false)
+
+// Check auth status
+onMounted(async () => {
+  try {
+    const { data: { session } } = await supabase.auth.getSession()
+    isLoggedIn.value = !!session
+    
+    // Listen for auth changes
+    supabase.auth.onAuthStateChange((event, session) => {
+      isLoggedIn.value = !!session
+    })
+  } catch (error) {
+    isLoggedIn.value = false
+  }
+})
+
+const logout = async () => {
+  await supabase.auth.signOut()
+  isLoggedIn.value = false
+  mobileMenuOpen.value = false
+  router.push('/')
+}
 
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
@@ -323,7 +363,71 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Add mobile CTA style */
+/* Admin Login Button */
+.admin-login-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.admin-login-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: white;
+}
+
+.header-sticky .admin-login-btn {
+  background: rgba(0, 85, 255, 0.1);
+  color: #0055FF;
+  border-color: rgba(0, 85, 255, 0.3);
+}
+
+.header-sticky .admin-login-btn:hover {
+  background: rgba(0, 85, 255, 0.2);
+  border-color: #0055FF;
+}
+
+.admin-logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 18px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.admin-logout-btn:hover {
+  background: #c82333;
+}
+
+/* Mobile Admin Link */
+.mobile-admin-link {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  color: #0055FF !important;
+  font-weight: 600 !important;
+  padding: 10px 0 !important;
+  justify-content: flex-start !important;
+}
+
+/* Mobile CTA */
 .mobile-cta {
   display: inline-block;
   background: linear-gradient(45deg, #0055FF, #6A0DAD);
@@ -336,7 +440,6 @@ onUnmounted(() => {
   width: 100%;
 }
 
-/* Rest of the styles remain the same as in your original file */
 .yemars-header-area {
   position: fixed;
   top: 0;
@@ -383,7 +486,6 @@ onUnmounted(() => {
   transition: all 0.3s ease;
 }
 
-/* Main Menu Styles */
 .yemars-main-menu {
   position: relative;
 }
@@ -435,7 +537,6 @@ onUnmounted(() => {
   transform: rotate(180deg);
 }
 
-/* Mega Menu Styles */
 .mega-menu-parent {
   position: relative !important;
 }
@@ -526,7 +627,6 @@ onUnmounted(() => {
   background: transparent !important;
 }
 
-/* Regular submenu (for non-mega dropdowns) */
 .yemars-main-menu ul li .sub-menu:not(.mega-menu) {
   position: absolute;
   top: 100%;
@@ -607,7 +707,6 @@ onUnmounted(() => {
   opacity: 1;
 }
 
-/* Mobile Menu Styles */
 .yemars-offcanvas-toggle {
   background: none;
   border: none;
@@ -689,7 +788,6 @@ onUnmounted(() => {
   display: none;
 }
 
-/* Mobile Mega Menu Styles */
 .mobile-mega {
   padding-left: 0 !important;
   width: 100%;
@@ -813,7 +911,6 @@ onUnmounted(() => {
   visibility: visible;
 }
 
-/* Fix for Font Awesome icons */
 .fa-solid, .fa-regular, .fa-brands {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -828,7 +925,6 @@ onUnmounted(() => {
   font-weight: 400;
 }
 
-/* Desktop responsive */
 @media (min-width: 1200px) and (max-width: 1400px) {
   .mega-menu-column {
     padding: 0 10px;
@@ -857,15 +953,10 @@ onUnmounted(() => {
   }
 }
 
-/* Mobile responsive */
 @media (max-width: 991px) {
   .yemars-header-area {
     background: transparent;
     box-shadow: none;
-  }
-  
-  .yemars-header-area:not(.header-sticky) {
-    background: transparent;
   }
   
   .yemars-header-area.header-sticky {
@@ -884,15 +975,6 @@ onUnmounted(() => {
   .logo-image {
     height: 28px;
   }
-  
-  .col-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  
-  .text-end {
-    text-align: right;
-  }
 }
 
 @media (max-width: 480px) {
@@ -902,14 +984,6 @@ onUnmounted(() => {
   
   .logo-image {
     height: 24px;
-  }
-  
-  .mobile-mega-title {
-    font-size: 13px !important;
-  }
-  
-  .mobile-mega-sub li a {
-    font-size: 12px !important;
   }
 }
 </style>

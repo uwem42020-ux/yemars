@@ -1,0 +1,33 @@
+[build]
+  command = "npm run generate"
+  publish = "dist"
+
+[[redirects]]
+  from = "http://yemars.ng/*"
+  to = "https://yemars.ng/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.yemars.ng/*"
+  to = "https://yemars.ng/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.yemars.ng/*"
+  to = "https://yemars.ng/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/_nuxt/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
