@@ -635,17 +635,17 @@
 import { ref, computed, onMounted } from 'vue'
 import LeadModal from '~/components/LeadModal.vue'
 
-// SEO Meta Tags with updated og:image
+// ===== SEO META TAGS (FIXED: absolute URLs for og:image and twitter:image) =====
 useSeoMeta({
   title: 'Yemars Technology Nigeria - Web Development & Digital Solutions in Abuja',
   description: 'Professional web development, app development, graphic design, and digital marketing services in Abuja, Nigeria. Custom solutions for Nigerian businesses with transparent Naira pricing.',
   ogTitle: 'Yemars Technology Nigeria - Your Complete Technology Partner',
   ogDescription: 'From web development to printing, we handle all your digital needs under one roof in Abuja. Get started with your website project today.',
-  ogImage: '/og-image.png',
+  ogImage: 'https://yemars.ng/og-image.png',  // ✅ Absolute URL
   ogUrl: 'https://yemars.ng',
   twitterTitle: 'Yemars Technology Nigeria - Web Development & Digital Solutions',
   twitterDescription: 'Professional web development, app development, and digital marketing services in Abuja, Nigeria.',
-  twitterImage: '/og-image.png',
+  twitterImage: 'https://yemars.ng/og-image.png', // ✅ Absolute URL
   ogImageType: 'image/png',
   ogImageWidth: 1200,
   ogImageHeight: 630,
