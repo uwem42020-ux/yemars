@@ -123,6 +123,19 @@
                 </a>
               </div>
             </div>
+
+            <!-- Admin Access Card -->
+            <div class="admin-access-card">
+              <h3>Admin Access</h3>
+              <p v-if="!isLoggedIn">Are you a site administrator? Login to manage content.</p>
+              <p v-else>You are logged in as administrator.</p>
+              <NuxtLink v-if="!isLoggedIn" to="/admin/login" class="admin-btn admin-login-btn">
+                <i class="fa-solid fa-lock"></i> Admin Login
+              </NuxtLink>
+              <button v-else @click="logout" class="admin-btn admin-logout-btn">
+                <i class="fa-solid fa-sign-out-alt"></i> Logout
+              </button>
+            </div>
           </div>
 
           <!-- Contact Form -->
@@ -361,10 +374,13 @@ useSeoMeta({
 })
 
 const route = useRoute()
+const supabase = useSupabaseClient()
+
 const submitting = ref(false)
 const success = ref(false)
 const formError = ref('')
 const activeFaq = ref(0)
+const isLoggedIn = ref(false)
 
 const toggleFaq = (index) => {
   if (activeFaq.value === index) {
@@ -382,7 +398,29 @@ onMounted(() => {
   if (route.query.service) {
     form.service = route.query.service
   }
+
+  // Check auth status
+  checkAuth()
 })
+
+const checkAuth = async () => {
+  try {
+    const { data: { session } } = await supabase.auth.getSession()
+    isLoggedIn.value = !!session
+
+    // Listen for auth changes
+    supabase.auth.onAuthStateChange((event, session) => {
+      isLoggedIn.value = !!session
+    })
+  } catch (error) {
+    isLoggedIn.value = false
+  }
+}
+
+const logout = async () => {
+  await supabase.auth.signOut()
+  isLoggedIn.value = false
+}
 
 const services = [
   'Corporate Web App',
@@ -760,6 +798,64 @@ const faqs = [
 .social-link:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Admin Access Card */
+.admin-access-card {
+  background: white;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.admin-access-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0A1F44;
+  margin-bottom: 15px;
+}
+
+.admin-access-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.admin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-login-btn {
+  background: #0055FF;
+  color: white;
+}
+
+.admin-login-btn:hover {
+  background: #0044cc;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,85,255,0.3);
+}
+
+.admin-logout-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.admin-logout-btn:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(220,53,69,0.3);
 }
 
 /* Contact Form */
@@ -1175,7 +1271,8 @@ const faqs = [
   
   .info-card,
   .contact-form-wrapper,
-  .map-card {
+  .map-card,
+  .admin-access-card {
     padding: 30px 20px;
   }
   

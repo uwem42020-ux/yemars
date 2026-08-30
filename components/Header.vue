@@ -2,150 +2,130 @@
   <header>
     <div id="yemars-header-sticky" class="yemars-header-area" :class="{ 'header-sticky': isSticky }">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-2 col-md-6 col-6">
-            <div class="yemars-logo">
-              <NuxtLink to="/" class="header-logo-block">
-                <img 
-                  :src="isSticky ? '/logo2.png' : '/logo.png'" 
-                  :alt="isSticky ? 'Yemars Technology Logo Dark' : 'Yemars Technology Logo White'"
-                  class="logo-image"
-                >
-              </NuxtLink>
-            </div>
-          </div>
-          
-          <div class="col-lg-7 d-none d-lg-block">
-            <div class="yemars-main-menu">
-              <nav>
-                <ul>
-                  <li>
-                    <NuxtLink to="/" :class="{ active: $route.path === '/' }">Home</NuxtLink>
-                  </li>
-                  <li class="has-dropdown mega-menu-parent">
-                    <a href="javascript:void(0)" class="dropdown-toggle">
-                      Services <span class="dropdown-arrow"><i class="fa-solid fa-angle-down"></i></span>
-                    </a>
-                    
-                    <!-- Mega Menu -->
-                    <div class="mega-menu-wrapper">
-                      <div class="mega-menu-container">
-                        <ul class="sub-menu mega-menu">
-                          <li class="mega-menu-column">
-                            <span class="mega-menu-title">App & Web Development</span>
-                            <ul class="mega-sub-menu">
-                              <li><NuxtLink to="/services/corporate-app">Corporate Web App</NuxtLink></li>
-                              <li><NuxtLink to="/services/ecommerce-systems">E-Commerce Systems</NuxtLink></li>
-                              <li><NuxtLink to="/services/premium-web-apps">Premium Web Apps</NuxtLink></li>
-                              <li><NuxtLink to="/services/mobile-applications">Mobile Applications</NuxtLink></li>
-                              <li><NuxtLink to="/services/app-maintenance">App Maintenance</NuxtLink></li>
-                              <li><NuxtLink to="/services/fintech-app">Fintech App</NuxtLink></li>
-                            </ul>
-                          </li>
-                          
-                          <li class="mega-menu-column">
-                            <span class="mega-menu-title">Graphic Design</span>
-                            <ul class="mega-sub-menu">
-                              <li><NuxtLink to="/services/graphic-design">Logo Design</NuxtLink></li>
-                              <li><NuxtLink to="/services/graphic-design">Business Cards</NuxtLink></li>
-                              <li><NuxtLink to="/services/graphic-design">Brochures & Flyers</NuxtLink></li>
-                              <li><NuxtLink to="/services/graphic-design">Banners & Posters</NuxtLink></li>
-                              <li><NuxtLink to="/services/graphic-design">Music Cover Art</NuxtLink></li>
-                              <li><NuxtLink to="/services/graphic-design">Branding & Identity</NuxtLink></li>
-                            </ul>
-                          </li>
-                          
-                          <li class="mega-menu-column">
-                            <span class="mega-menu-title">Networking</span>
-                            <ul class="mega-sub-menu">
-                              <li><NuxtLink to="/services/networking">Office Networking</NuxtLink></li>
-                              <li><NuxtLink to="/services/networking">Wireless Setup</NuxtLink></li>
-                              <li><NuxtLink to="/services/networking">Workstation Installation</NuxtLink></li>
-                              <li><NuxtLink to="/services/networking">Server Configuration</NuxtLink></li>
-                              <li><NuxtLink to="/services/networking">CCTV Installation</NuxtLink></li>
-                              <li><NuxtLink to="/services/networking">Network Security</NuxtLink></li>
-                            </ul>
-                          </li>
-                          
-                          <li class="mega-menu-column">
-                            <span class="mega-menu-title">Printing</span>
-                            <ul class="mega-sub-menu">
-                              <li><NuxtLink to="/services/printing">Flyers & Handbills</NuxtLink></li>
-                              <li><NuxtLink to="/services/printing">Flex Banners</NuxtLink></li>
-                              <li><NuxtLink to="/services/printing">Roll-up Stands</NuxtLink></li>
-                              <li><NuxtLink to="/services/printing">Business Cards</NuxtLink></li>
-                              <li><NuxtLink to="/services/printing">Posters</NuxtLink></li>
-                              <li><NuxtLink to="/services/printing">Promotional Items</NuxtLink></li>
-                            </ul>
-                          </li>
-                          
-                          <li class="mega-menu-column">
-                            <span class="mega-menu-title">Social Media</span>
-                            <ul class="mega-sub-menu">
-                              <li><NuxtLink to="/services/social-media-management">Content Creation</NuxtLink></li>
-                              <li><NuxtLink to="/services/social-media-management">SEO Optimization</NuxtLink></li>
-                              <li><NuxtLink to="/services/social-media-management">Community Management</NuxtLink></li>
-                              <li><NuxtLink to="/services/social-media-management">Ad Campaigns</NuxtLink></li>
-                              <li><NuxtLink to="/services/social-media-management">Analytics & Reports</NuxtLink></li>
-                              <li><NuxtLink to="/services/social-media-management">Strategy Planning</NuxtLink></li>
-                            </ul>
-                          </li>
+        <div class="header-inner">
+          <!-- Logo -->
+          <NuxtLink to="/" class="logo-link">
+            <img 
+              :src="isSticky ? '/logo2.png' : '/logo.png'" 
+              :alt="isSticky ? 'Yemars Technology Logo Dark' : 'Yemars Technology Logo White'"
+              class="logo-image"
+            >
+          </NuxtLink>
+
+          <!-- Desktop Navigation -->
+          <nav class="desktop-nav">
+            <ul>
+              <li>
+                <NuxtLink to="/" :class="{ active: $route.path === '/' }">Home</NuxtLink>
+              </li>
+              <li class="has-dropdown mega-menu-parent">
+                <a href="javascript:void(0)" class="dropdown-toggle">
+                  Services <span class="dropdown-arrow"><i class="fa-solid fa-angle-down"></i></span>
+                </a>
+                
+                <!-- Mega Menu -->
+                <div class="mega-menu-wrapper">
+                  <div class="mega-menu-container">
+                    <ul class="sub-menu mega-menu">
+                      <li class="mega-menu-column">
+                        <span class="mega-menu-title">App & Web Development</span>
+                        <ul class="mega-sub-menu">
+                          <li><NuxtLink to="/services/corporate-app">Corporate Web App</NuxtLink></li>
+                          <li><NuxtLink to="/services/ecommerce-systems">E-Commerce Systems</NuxtLink></li>
+                          <li><NuxtLink to="/services/premium-web-apps">Premium Web Apps</NuxtLink></li>
+                          <li><NuxtLink to="/services/mobile-applications">Mobile Applications</NuxtLink></li>
+                          <li><NuxtLink to="/services/app-maintenance">App Maintenance</NuxtLink></li>
+                          <li><NuxtLink to="/services/fintech-app">Fintech App</NuxtLink></li>
                         </ul>
-                      </div>
-                    </div>
-                  </li>
-                  
-                  <li>
-                    <NuxtLink to="/pricing" :class="{ active: $route.path === '/pricing' }">Pricing</NuxtLink>
-                  </li>
-                  <li>
-                    <NuxtLink to="/about" :class="{ active: $route.path === '/about' }">About</NuxtLink>
-                  </li>
-                  <li>
-                    <NuxtLink to="/contact" :class="{ active: $route.path === '/contact' }">Contact</NuxtLink>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6 col-6">
-            <div class="yemars-header-btn text-end d-none d-lg-block" style="display: flex; align-items: center; gap: 10px; justify-content: flex-end;">
-              <!-- Admin Login/Logout Button -->
-              <NuxtLink 
-                v-if="!isLoggedIn" 
-                to="/admin/login" 
-                class="admin-login-btn"
-              >
-                <i class="fa-solid fa-lock"></i>
-                Admin
-              </NuxtLink>
+                      </li>
+                      
+                      <li class="mega-menu-column">
+                        <span class="mega-menu-title">Graphic Design</span>
+                        <ul class="mega-sub-menu">
+                          <li><NuxtLink to="/services/graphic-design">Logo Design</NuxtLink></li>
+                          <li><NuxtLink to="/services/graphic-design">Business Cards</NuxtLink></li>
+                          <li><NuxtLink to="/services/graphic-design">Brochures & Flyers</NuxtLink></li>
+                          <li><NuxtLink to="/services/graphic-design">Banners & Posters</NuxtLink></li>
+                          <li><NuxtLink to="/services/graphic-design">Music Cover Art</NuxtLink></li>
+                          <li><NuxtLink to="/services/graphic-design">Branding & Identity</NuxtLink></li>
+                        </ul>
+                      </li>
+                      
+                      <li class="mega-menu-column">
+                        <span class="mega-menu-title">Networking</span>
+                        <ul class="mega-sub-menu">
+                          <li><NuxtLink to="/services/networking">Office Networking</NuxtLink></li>
+                          <li><NuxtLink to="/services/networking">Wireless Setup</NuxtLink></li>
+                          <li><NuxtLink to="/services/networking">Workstation Installation</NuxtLink></li>
+                          <li><NuxtLink to="/services/networking">Server Configuration</NuxtLink></li>
+                          <li><NuxtLink to="/services/networking">CCTV Installation</NuxtLink></li>
+                          <li><NuxtLink to="/services/networking">Network Security</NuxtLink></li>
+                        </ul>
+                      </li>
+                      
+                      <li class="mega-menu-column">
+                        <span class="mega-menu-title">Printing</span>
+                        <ul class="mega-sub-menu">
+                          <li><NuxtLink to="/services/printing">Flyers & Handbills</NuxtLink></li>
+                          <li><NuxtLink to="/services/printing">Flex Banners</NuxtLink></li>
+                          <li><NuxtLink to="/services/printing">Roll-up Stands</NuxtLink></li>
+                          <li><NuxtLink to="/services/printing">Business Cards</NuxtLink></li>
+                          <li><NuxtLink to="/services/printing">Posters</NuxtLink></li>
+                          <li><NuxtLink to="/services/printing">Promotional Items</NuxtLink></li>
+                        </ul>
+                      </li>
+                      
+                      <li class="mega-menu-column">
+                        <span class="mega-menu-title">Social Media</span>
+                        <ul class="mega-sub-menu">
+                          <li><NuxtLink to="/services/social-media-management">Content Creation</NuxtLink></li>
+                          <li><NuxtLink to="/services/social-media-management">SEO Optimization</NuxtLink></li>
+                          <li><NuxtLink to="/services/social-media-management">Community Management</NuxtLink></li>
+                          <li><NuxtLink to="/services/social-media-management">Ad Campaigns</NuxtLink></li>
+                          <li><NuxtLink to="/services/social-media-management">Analytics & Reports</NuxtLink></li>
+                          <li><NuxtLink to="/services/social-media-management">Strategy Planning</NuxtLink></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
               
-              <button 
-                v-else 
-                @click="logout" 
-                class="admin-logout-btn"
-              >
-                <i class="fa-solid fa-sign-out-alt"></i>
-                Logout
-              </button>
-              
-              <a href="/#domain-section" class="theme-btn13">
-                Get Started <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span>
-                <span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span>
-              </a>
-            </div>
-            <div class="yemars-header-action-item text-end d-block d-lg-none">
-              <button type="button" class="yemars-offcanvas-toggle" @click="toggleMobileMenu">
-                <i class="fa-solid fa-bars"></i>
-              </button>
-            </div>
+              <li>
+                <NuxtLink to="/pricing" :class="{ active: $route.path === '/pricing' }">Pricing</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/about" :class="{ active: $route.path === '/about' }">About</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/contact" :class="{ active: $route.path === '/contact' }">Contact</NuxtLink>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Right side: Desktop CTA + Mobile CTA + Toggle -->
+          <div class="header-actions">
+            <!-- Desktop large CTA (hidden on mobile) -->
+            <a href="/#domain-section" class="theme-btn13 desktop-cta">
+              Get Started <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span>
+              <span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <!-- Mobile small CTA (hidden on desktop) -->
+            <a href="/#domain-section" class="mobile-cta-header">
+              Get Started
+            </a>
+
+            <!-- Hamburger toggle (always visible on mobile) -->
+            <button type="button" class="mobile-toggle" @click="toggleMobileMenu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu (Offcanvas) -->
     <div class="yemars-offcanvas" :class="{ active: mobileMenuOpen }">
       <div class="yemars-offcanvas-wrapper">
         <div class="yemars-offcanvas-header d-flex justify-content-between align-items-center">
@@ -248,14 +228,6 @@
               <li>
                 <a href="/#domain-section" class="mobile-cta" @click="toggleMobileMenu">Get Started</a>
               </li>
-              <li>
-                <NuxtLink v-if="!isLoggedIn" to="/admin/login" @click="toggleMobileMenu" class="mobile-admin-link">
-                  <i class="fa-solid fa-lock"></i> Admin Login
-                </NuxtLink>
-                <a v-else href="javascript:void(0)" @click="logout" class="mobile-admin-link">
-                  <i class="fa-solid fa-sign-out-alt"></i> Logout
-                </a>
-              </li>
             </ul>
           </nav>
         </div>
@@ -291,37 +263,9 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { useRouter } from 'vue-router'
-
-const route = useRoute()
-const router = useRouter()
-const supabase = useSupabaseClient()
 
 const mobileMenuOpen = ref(false)
 const isSticky = ref(false)
-const isLoggedIn = ref(false)
-
-// Check auth status
-onMounted(async () => {
-  try {
-    const { data: { session } } = await supabase.auth.getSession()
-    isLoggedIn.value = !!session
-    
-    // Listen for auth changes
-    supabase.auth.onAuthStateChange((event, session) => {
-      isLoggedIn.value = !!session
-    })
-  } catch (error) {
-    isLoggedIn.value = false
-  }
-})
-
-const logout = async () => {
-  await supabase.auth.signOut()
-  isLoggedIn.value = false
-  mobileMenuOpen.value = false
-  router.push('/')
-}
 
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
@@ -363,83 +307,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Admin Login Button */
-.admin-login-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 10px 18px;
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.admin-login-btn:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: white;
-}
-
-.header-sticky .admin-login-btn {
-  background: rgba(0, 85, 255, 0.1);
-  color: #0055FF;
-  border-color: rgba(0, 85, 255, 0.3);
-}
-
-.header-sticky .admin-login-btn:hover {
-  background: rgba(0, 85, 255, 0.2);
-  border-color: #0055FF;
-}
-
-.admin-logout-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 10px 18px;
-  background: #dc3545;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.admin-logout-btn:hover {
-  background: #c82333;
-}
-
-/* Mobile Admin Link */
-.mobile-admin-link {
-  display: flex !important;
-  align-items: center;
-  gap: 8px;
-  color: #0055FF !important;
-  font-weight: 600 !important;
-  padding: 10px 0 !important;
-  justify-content: flex-start !important;
-}
-
-/* Mobile CTA */
-.mobile-cta {
-  display: inline-block;
-  background: linear-gradient(45deg, #0055FF, #6A0DAD);
-  color: white !important;
-  padding: 10px 20px !important;
-  border-radius: 8px;
-  font-weight: 600;
-  margin-top: 10px;
-  text-align: center;
-  width: 100%;
-}
-
+/* ===== Header Container ===== */
 .yemars-header-area {
   position: fixed;
   top: 0;
@@ -448,7 +316,7 @@ onUnmounted(() => {
   z-index: 1000;
   background: transparent;
   transition: all 0.3s ease;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 .yemars-header-area.header-sticky {
@@ -457,53 +325,53 @@ onUnmounted(() => {
   padding: 10px 0;
 }
 
-.yemars-header-area.header-sticky .yemars-main-menu ul li a {
-  color: #333;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-.yemars-header-area.header-sticky .yemars-offcanvas-toggle {
-  color: #333;
-}
-
-.yemars-header-area:not(.header-sticky) .yemars-main-menu ul li a {
-  color: white;
-}
-
-.yemars-header-area:not(.header-sticky) .yemars-offcanvas-toggle {
-  color: white;
-}
-
-.yemars-logo {
+.header-inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== Logo ===== */
+.logo-link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .logo-image {
-  width: auto;
   height: 32px;
-  max-width: 274px;
+  width: auto;
   object-fit: contain;
-  transition: all 0.3s ease;
+  transition: height 0.3s ease;
 }
 
-.yemars-main-menu {
-  position: relative;
-}
-
-.yemars-main-menu > nav > ul {
+/* ===== Desktop Navigation ===== */
+.desktop-nav {
+  flex: 1;
   display: flex;
   justify-content: center;
+}
+
+.desktop-nav > ul {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
-.yemars-main-menu > nav > ul > li {
+.desktop-nav > ul > li {
   position: static;
   margin: 0 15px;
 }
 
-.yemars-main-menu > nav > ul > li > a {
+.desktop-nav > ul > li > a {
   font-weight: 500;
   text-decoration: none;
   padding: 10px 0;
@@ -513,30 +381,19 @@ onUnmounted(() => {
   transition: all 0.3s ease;
   font-size: 16px;
   white-space: nowrap;
+  color: white;
 }
 
-.yemars-main-menu ul li a:hover,
-.yemars-main-menu ul li a.active {
+.header-sticky .desktop-nav > ul > li > a {
+  color: #333;
+}
+
+.desktop-nav ul li a:hover,
+.desktop-nav ul li a.active {
   color: #0055FF !important;
 }
 
-.yemars-main-menu ul li.has-dropdown > a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.yemars-main-menu ul li.has-dropdown > a .dropdown-arrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-}
-
-.yemars-main-menu ul li.has-dropdown:hover > a .dropdown-arrow {
-  transform: rotate(180deg);
-}
-
+/* ===== Mega Menu (Desktop) ===== */
 .mega-menu-parent {
   position: relative !important;
 }
@@ -627,41 +484,12 @@ onUnmounted(() => {
   background: transparent !important;
 }
 
-.yemars-main-menu ul li .sub-menu:not(.mega-menu) {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  min-width: 220px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  padding: 10px 0;
-  z-index: 100;
-}
-
-.yemars-main-menu ul li:hover .sub-menu:not(.mega-menu) {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.yemars-main-menu ul li .sub-menu:not(.mega-menu) li {
-  margin: 0;
-}
-
-.yemars-main-menu ul li .sub-menu:not(.mega-menu) li a {
-  padding: 8px 20px;
-  color: #666 !important;
-  font-size: 14px;
-}
-
-.yemars-main-menu ul li .sub-menu:not(.mega-menu) li a:hover {
-  color: #0055FF !important;
-  background: #f5f5f5;
+/* ===== Header Actions ===== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .theme-btn13 {
@@ -679,6 +507,7 @@ onUnmounted(() => {
   overflow: hidden;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .theme-btn13:hover {
@@ -707,14 +536,33 @@ onUnmounted(() => {
   opacity: 1;
 }
 
-.yemars-offcanvas-toggle {
+.mobile-cta-header {
+  display: none; /* Hidden by default, shown on mobile */
+  background: linear-gradient(45deg, #0055FF, #6A0DAD);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.mobile-toggle {
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
-  transition: color 0.3s ease;
+  color: white;
+  padding: 5px;
+  display: none; /* Hidden on desktop, shown on mobile */
 }
 
+.header-sticky .mobile-toggle {
+  color: #333;
+}
+
+/* ===== Offcanvas Menu ===== */
 .yemars-offcanvas {
   position: fixed;
   top: 0;
@@ -839,6 +687,19 @@ onUnmounted(() => {
   color: #0055FF !important;
 }
 
+.mobile-cta {
+  display: inline-block;
+  background: linear-gradient(45deg, #0055FF, #6A0DAD);
+  color: white !important;
+  padding: 10px 20px !important;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  justify-content: center !important;
+}
+
 .yemars-offcanvas-info {
   margin-top: 40px;
 }
@@ -911,6 +772,7 @@ onUnmounted(() => {
   visibility: visible;
 }
 
+/* ===== Icons ===== */
 .fa-solid, .fa-regular, .fa-brands {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -925,65 +787,64 @@ onUnmounted(() => {
   font-weight: 400;
 }
 
-@media (min-width: 1200px) and (max-width: 1400px) {
-  .mega-menu-column {
-    padding: 0 10px;
+/* ===== Responsive ===== */
+@media (max-width: 991.98px) {
+  .desktop-nav {
+    display: none; /* Hide entire desktop nav on mobile/tablet */
   }
-  
-  .mega-menu-title {
-    font-size: 12px;
+  .desktop-cta {
+    display: none !important; /* Hide large desktop CTA */
   }
-  
-  .mega-sub-menu li a {
-    font-size: 11px !important;
+  .mobile-cta-header {
+    display: inline-flex; /* Show small mobile CTA */
   }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .mega-menu-column {
-    padding: 0 8px;
+  .mobile-toggle {
+    display: block; /* Show hamburger */
   }
-  
-  .mega-menu-title {
-    font-size: 11px;
+  .header-actions {
+    justify-content: flex-end;
+    gap: 8px;
   }
-  
-  .mega-sub-menu li a {
-    font-size: 10px !important;
-  }
-}
-
-@media (max-width: 991px) {
-  .yemars-header-area {
-    background: transparent;
-    box-shadow: none;
-  }
-  
-  .yemars-header-area.header-sticky {
-    background: white;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  }
-  
-  .yemars-header-area.header-sticky .yemars-offcanvas-toggle {
-    color: #333;
-  }
-  
-  .yemars-header-area:not(.header-sticky) .yemars-offcanvas-toggle {
-    color: white;
-  }
-  
   .logo-image {
     height: 28px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 575.98px) {
+  .logo-image {
+    height: 24px;
+  }
+  .yemars-header-area {
+    padding: 12px 0;
+  }
+  .mobile-cta-header {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .mobile-toggle {
+    font-size: 20px;
+  }
   .yemars-offcanvas {
     width: 280px;
   }
-  
+}
+
+@media (max-width: 360px) {
   .logo-image {
-    height: 24px;
+    height: 20px;
+  }
+  .mobile-cta-header {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  .mobile-toggle {
+    font-size: 18px;
+  }
+  .yemars-header-area {
+    padding: 10px 0;
+  }
+  .container {
+    padding: 0 10px;
   }
 }
 </style>

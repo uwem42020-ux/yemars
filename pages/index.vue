@@ -635,17 +635,21 @@
 import { ref, computed, onMounted } from 'vue'
 import LeadModal from '~/components/LeadModal.vue'
 
-// SEO Meta Tags
+// SEO Meta Tags with updated og:image
 useSeoMeta({
   title: 'Yemars Technology Nigeria - Web Development & Digital Solutions in Abuja',
   description: 'Professional web development, app development, graphic design, and digital marketing services in Abuja, Nigeria. Custom solutions for Nigerian businesses with transparent Naira pricing.',
   ogTitle: 'Yemars Technology Nigeria - Your Complete Technology Partner',
   ogDescription: 'From web development to printing, we handle all your digital needs under one roof in Abuja. Get started with your website project today.',
-  ogImage: '/og-image-home.jpg',
+  ogImage: '/og-image.png',
   ogUrl: 'https://yemars.ng',
   twitterTitle: 'Yemars Technology Nigeria - Web Development & Digital Solutions',
   twitterDescription: 'Professional web development, app development, and digital marketing services in Abuja, Nigeria.',
-  twitterImage: '/twitter-image-home.jpg',
+  twitterImage: '/og-image.png',
+  ogImageType: 'image/png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  twitterCard: 'summary_large_image',
   keywords: 'web development companies in Nigeria, best web designers in Abuja, website design cost Nigeria, how to create an app in Nigeria, ecommerce website design Nigeria, digital marketing agency Abuja, graphic design services Nigeria, web design company Abuja, mobile app developers Nigeria, website maintenance services Nigeria'
 })
 
@@ -2081,6 +2085,68 @@ const handleLeadSubmitted = (data) => {
   
   .quick-link-card i {
     margin-bottom: 5px;
+  }
+
+  /* Domain Search Mobile Fix */
+  .hero6-form-area {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+  }
+  .hero6-form-area input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+  .theme-btn16 {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Extra small screens (≤360px) */
+@media (max-width: 360px) {
+  /* Reduce hero heading font size further */
+  .main-heading6 h1 {
+    font-size: 22px;
+  }
+
+  /* Allow hero buttons to stack vertically */
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Reduce container padding */
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  /* Domain form button and input already full width */
+  .hero6-form-area input {
+    font-size: 14px;
+  }
+
+  /* Reduce package card padding */
+  .package-card {
+    padding: 15px;
+  }
+
+  /* Make popular badge smaller */
+  .popular-badge {
+    font-size: 12px;
+    padding: 3px 15px;
+    top: -10px;
+  }
+
+  /* Reduce heading sizes in other sections if needed */
+  .heading6 h2 {
+    font-size: 22px;
   }
 }
 </style>
