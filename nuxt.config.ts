@@ -4,6 +4,11 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   
+  // 🔥 ADD THIS LINE TO ENABLE NETLIFY FUNCTIONS
+  nitro: {
+    preset: 'netlify'
+  },
+  
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
