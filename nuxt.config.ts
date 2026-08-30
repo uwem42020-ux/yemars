@@ -4,9 +4,12 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   
-  // 🔥 ADD THIS LINE TO ENABLE NETLIFY FUNCTIONS
+  // Enable Netlify Functions and set output directory to dist
   nitro: {
-    preset: 'netlify'
+    preset: 'netlify',
+    output: {
+      dir: 'dist'
+    }
   },
   
   modules: [
