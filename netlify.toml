@@ -1,6 +1,9 @@
 [build]
-  command = "npm run generate"
-  publish = "dist"
+  command = "npm run build"
+  publish = ".output/public"
+
+[functions]
+  directory = "netlify/functions"
 
 [[redirects]]
   from = "http://yemars.ng/*"
