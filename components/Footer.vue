@@ -35,10 +35,10 @@
               </div>
 
               <div class="yemars-footer-social">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/yemarstech" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/yemarstech" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/yemars-technology" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/yemarstech" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
               </div>
             </div>
           </div>
@@ -53,9 +53,10 @@
                   <div class="yemars-footer-list">
                     <ul>
                       <li><NuxtLink to="/">Home</NuxtLink></li>
-                      <li><NuxtLink to="/services">Our Services</NuxtLink></li>
-                      <li><NuxtLink to="/pricing">Pricing</NuxtLink></li>
-                      <li><NuxtLink to="/contact">Contact Us</NuxtLink></li>
+                      <li><NuxtLink to="/services/">Our Services</NuxtLink></li>
+                      <li><NuxtLink to="/pricing/">Pricing</NuxtLink></li>
+                      <li><NuxtLink to="/about/">About Us</NuxtLink></li>
+                      <li><NuxtLink to="/contact/">Contact Us</NuxtLink></li>
                     </ul>
                   </div>
                 </div>
@@ -67,12 +68,12 @@
                   <h4>Our Services</h4>
                   <div class="yemars-footer-list">
                     <ul>
-                      <li><NuxtLink to="/services/corporate-app">Corporate Web App</NuxtLink></li>
-                      <li><NuxtLink to="/services/ecommerce-systems">E-Commerce Systems</NuxtLink></li>
-                      <li><NuxtLink to="/services/premium-web-apps">Premium Web Apps</NuxtLink></li>
-                      <li><NuxtLink to="/services/mobile-applications">Mobile Apps</NuxtLink></li>
-                      <li><NuxtLink to="/services/app-maintenance">App Maintenance</NuxtLink></li>
-                      <li><NuxtLink to="/services/fintech-app">Fintech App</NuxtLink></li>
+                      <li><NuxtLink to="/services/corporate-app/">Corporate Web App</NuxtLink></li>
+                      <li><NuxtLink to="/services/ecommerce-systems/">E-Commerce Systems</NuxtLink></li>
+                      <li><NuxtLink to="/services/premium-web-apps/">Premium Web Apps</NuxtLink></li>
+                      <li><NuxtLink to="/services/mobile-applications/">Mobile Apps</NuxtLink></li>
+                      <li><NuxtLink to="/services/app-maintenance/">App Maintenance</NuxtLink></li>
+                      <li><NuxtLink to="/services/fintech-app/">Fintech App</NuxtLink></li>
                     </ul>
                   </div>
                 </div>
@@ -95,10 +96,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Service Areas -->
+        <!-- Service Areas -->
         <div class="row mt-40">
           <div class="col-12">
             <FooterLocations />
@@ -232,7 +231,6 @@ const subscribeNewsletter = () => {
   margin-left: 2px;
 }
 
-/* Keep address text consistent */
 .contact-item span:not(.contact-label) {
   color: #ccc;
 }
@@ -418,6 +416,10 @@ const subscribeNewsletter = () => {
   color: #0055FF;
 }
 
+.mt-40 {
+  margin-top: 40px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 991px) {
   .footer-widgets {
@@ -439,7 +441,6 @@ const subscribeNewsletter = () => {
     padding-right: 110px;
   }
   
-  /* Ensure columns stack properly on mobile */
   .col-sm-6 {
     width: 50%;
     float: left;
@@ -476,7 +477,6 @@ const subscribeNewsletter = () => {
   }
 }
 
-/* Clear floats */
 .row::after {
   content: "";
   display: table;
