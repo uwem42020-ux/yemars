@@ -27,6 +27,20 @@
   status = 301
   force = true
 
+# ADD THESE NEW REDIRECTS:
+[[redirects]]
+  from = "/services-index"
+  to = "/services/"
+  status = 301
+
+[[redirects]]
+  from = "/services-index/*"
+  to = "/services/:splat"
+  status = 301
+
+# Remove trailing slash redirect (Nuxt handles this)
+# Don't add this - it will conflict with Nuxt's trailingSlash setting
+
 [[headers]]
   for = "/*"
   [headers.values]

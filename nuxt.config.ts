@@ -4,9 +4,18 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   
-  // Enable Netlify Functions (no custom output dir – use default .output)
+  // Enable Netlify Functions
   nitro: {
-    preset: 'netlify'
+    preset: 'netlify',
+    // Add trailing slash handling here
+    routeRules: {
+      // This forces trailing slashes
+      '/**': { 
+        // Remove trailingSlash from here
+        prerender: false,
+        // We'll handle trailing slashes differently
+      }
+    }
   },
   
   modules: [
@@ -20,7 +29,7 @@ export default defineNuxtConfig({
   
   css: ['~/assets/css/main.css'],
   
-  // Site configuration (requires nuxt-schema-org module - now installed)
+  // Site configuration
   site: {
     url: 'https://yemars.ng',
     name: 'Yemars Technology Nigeria',
@@ -50,7 +59,7 @@ export default defineNuxtConfig({
     base64: false
   },
 
-  // App configuration - UPDATED FOR AGGRESSIVE SEO
+  // App configuration
   app: {
     head: {
       htmlAttrs: { 
@@ -167,8 +176,9 @@ export default defineNuxtConfig({
     }
   },
 
-  // Route rules for SEO
+  // Route rules for SEO - WITHOUT trailingSlash
   routeRules: {
+    // Home page
     '/': { 
       prerender: true,
       swr: 3600,
@@ -176,6 +186,8 @@ export default defineNuxtConfig({
         'Cache-Control': 'public, max-age=3600, s-maxage=3600'
       }
     },
+    
+    // Static pages
     '/about': { 
       prerender: true,
       swr: 86400 
@@ -184,7 +196,19 @@ export default defineNuxtConfig({
       prerender: true,
       swr: 86400 
     },
+    '/pricing': { 
+      prerender: true,
+      swr: 86400 
+    },
+    
+    // Services pages
     '/services/**': { 
+      prerender: true,
+      swr: 86400 
+    },
+    
+    // Location pages
+    '/locations/**': { 
       prerender: true,
       swr: 86400 
     }
@@ -201,6 +225,23 @@ export default defineNuxtConfig({
     plugins: {
       tailwindcss: {},
       autoprefixer: {}
+    }
+  },
+
+  // Hooks for canonical URLs
+  hooks: {
+    'pages:extend'(pages) {
+      pages.forEach(page => {
+        if (!page.meta) page.meta = {}
+        if (!page.meta.link) page.meta.link = []
+        
+        // Add canonical link for each page with trailing slash
+        const canonicalPath = page.path.endsWith('/') ? page.path : page.path + '/'
+        page.meta.link.push({
+          rel: 'canonical',
+          href: `https://yemars.ng${canonicalPath}`
+        })
+      })
     }
   }
 })

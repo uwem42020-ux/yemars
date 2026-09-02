@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <footer class="yemars-footer-area">
     <!-- Footer Widgets -->
     <div class="footer-widgets">
@@ -98,6 +98,15 @@
       </div>
     </div>
 
+    <!-- Service Areas -->
+        <div class="row mt-40">
+          <div class="col-12">
+            <FooterLocations />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Copyright -->
     <div class="yemars-copyright">
       <div class="container">
@@ -122,6 +131,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import FooterLocations from '~/components/FooterLocations.vue'
 
 const newsletterEmail = ref('')
 

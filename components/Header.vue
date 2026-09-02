@@ -30,60 +30,60 @@
                       <li class="mega-menu-column">
                         <span class="mega-menu-title">App & Web Development</span>
                         <ul class="mega-sub-menu">
-                          <li><NuxtLink to="/services/corporate-app">Corporate Web App</NuxtLink></li>
-                          <li><NuxtLink to="/services/ecommerce-systems">E-Commerce Systems</NuxtLink></li>
-                          <li><NuxtLink to="/services/premium-web-apps">Premium Web Apps</NuxtLink></li>
-                          <li><NuxtLink to="/services/mobile-applications">Mobile Applications</NuxtLink></li>
-                          <li><NuxtLink to="/services/app-maintenance">App Maintenance</NuxtLink></li>
-                          <li><NuxtLink to="/services/fintech-app">Fintech App</NuxtLink></li>
+                          <li><NuxtLink to="/services/corporate-app/">Corporate Web App</NuxtLink></li>
+                          <li><NuxtLink to="/services/ecommerce-systems/">E-Commerce Systems</NuxtLink></li>
+                          <li><NuxtLink to="/services/premium-web-apps/">Premium Web Apps</NuxtLink></li>
+                          <li><NuxtLink to="/services/mobile-applications/">Mobile Applications</NuxtLink></li>
+                          <li><NuxtLink to="/services/app-maintenance/">App Maintenance</NuxtLink></li>
+                          <li><NuxtLink to="/services/fintech-app/">Fintech App</NuxtLink></li>
                         </ul>
                       </li>
                       
                       <li class="mega-menu-column">
                         <span class="mega-menu-title">Graphic Design</span>
                         <ul class="mega-sub-menu">
-                          <li><NuxtLink to="/services/graphic-design">Logo Design</NuxtLink></li>
-                          <li><NuxtLink to="/services/graphic-design">Business Cards</NuxtLink></li>
-                          <li><NuxtLink to="/services/graphic-design">Brochures & Flyers</NuxtLink></li>
-                          <li><NuxtLink to="/services/graphic-design">Banners & Posters</NuxtLink></li>
-                          <li><NuxtLink to="/services/graphic-design">Music Cover Art</NuxtLink></li>
-                          <li><NuxtLink to="/services/graphic-design">Branding & Identity</NuxtLink></li>
+                          <li><NuxtLink to="/services/graphic-design/">Logo Design</NuxtLink></li>
+                          <li><NuxtLink to="/services/graphic-design/">Business Cards</NuxtLink></li>
+                          <li><NuxtLink to="/services/graphic-design/">Brochures & Flyers</NuxtLink></li>
+                          <li><NuxtLink to="/services/graphic-design/">Banners & Posters</NuxtLink></li>
+                          <li><NuxtLink to="/services/graphic-design/">Music Cover Art</NuxtLink></li>
+                          <li><NuxtLink to="/services/graphic-design/">Branding & Identity</NuxtLink></li>
                         </ul>
                       </li>
                       
                       <li class="mega-menu-column">
                         <span class="mega-menu-title">Networking</span>
                         <ul class="mega-sub-menu">
-                          <li><NuxtLink to="/services/networking">Office Networking</NuxtLink></li>
-                          <li><NuxtLink to="/services/networking">Wireless Setup</NuxtLink></li>
-                          <li><NuxtLink to="/services/networking">Workstation Installation</NuxtLink></li>
-                          <li><NuxtLink to="/services/networking">Server Configuration</NuxtLink></li>
-                          <li><NuxtLink to="/services/networking">CCTV Installation</NuxtLink></li>
-                          <li><NuxtLink to="/services/networking">Network Security</NuxtLink></li>
+                          <li><NuxtLink to="/services/networking/">Office Networking</NuxtLink></li>
+                          <li><NuxtLink to="/services/networking/">Wireless Setup</NuxtLink></li>
+                          <li><NuxtLink to="/services/networking/">Workstation Installation</NuxtLink></li>
+                          <li><NuxtLink to="/services/networking/">Server Configuration</NuxtLink></li>
+                          <li><NuxtLink to="/services/networking/">CCTV Installation</NuxtLink></li>
+                          <li><NuxtLink to="/services/networking/">Network Security</NuxtLink></li>
                         </ul>
                       </li>
                       
                       <li class="mega-menu-column">
                         <span class="mega-menu-title">Printing</span>
                         <ul class="mega-sub-menu">
-                          <li><NuxtLink to="/services/printing">Flyers & Handbills</NuxtLink></li>
-                          <li><NuxtLink to="/services/printing">Flex Banners</NuxtLink></li>
-                          <li><NuxtLink to="/services/printing">Roll-up Stands</NuxtLink></li>
-                          <li><NuxtLink to="/services/printing">Business Cards</NuxtLink></li>
-                          <li><NuxtLink to="/services/printing">Posters</NuxtLink></li>
-                          <li><NuxtLink to="/services/printing">Promotional Items</NuxtLink></li>
+                          <li><NuxtLink to="/services/printing/">Flyers & Handbills</NuxtLink></li>
+                          <li><NuxtLink to="/services/printing/">Flex Banners</NuxtLink></li>
+                          <li><NuxtLink to="/services/printing/">Roll-up Stands</NuxtLink></li>
+                          <li><NuxtLink to="/services/printing/">Business Cards</NuxtLink></li>
+                          <li><NuxtLink to="/services/printing/">Posters</NuxtLink></li>
+                          <li><NuxtLink to="/services/printing/">Promotional Items</NuxtLink></li>
                         </ul>
                       </li>
                       
                       <li class="mega-menu-column">
                         <span class="mega-menu-title">Social Media</span>
                         <ul class="mega-sub-menu">
-                          <li><NuxtLink to="/services/social-media-management">Content Creation</NuxtLink></li>
-                          <li><NuxtLink to="/services/social-media-management">SEO Optimization</NuxtLink></li>
-                          <li><NuxtLink to="/services/social-media-management">Community Management</NuxtLink></li>
-                          <li><NuxtLink to="/services/social-media-management">Ad Campaigns</NuxtLink></li>
-                          <li><NuxtLink to="/services/social-media-management">Analytics & Reports</NuxtLink></li>
-                          <li><NuxtLink to="/services/social-media-management">Strategy Planning</NuxtLink></li>
+                          <li><NuxtLink to="/services/social-media-management/">Content Creation</NuxtLink></li>
+                          <li><NuxtLink to="/services/social-media-management/">SEO Optimization</NuxtLink></li>
+                          <li><NuxtLink to="/services/social-media-management/">Community Management</NuxtLink></li>
+                          <li><NuxtLink to="/services/social-media-management/">Ad Campaigns</NuxtLink></li>
+                          <li><NuxtLink to="/services/social-media-management/">Analytics & Reports</NuxtLink></li>
+                          <li><NuxtLink to="/services/social-media-management/">Strategy Planning</NuxtLink></li>
                         </ul>
                       </li>
                     </ul>
@@ -92,13 +92,13 @@
               </li>
               
               <li>
-                <NuxtLink to="/pricing" :class="{ active: $route.path === '/pricing' }">Pricing</NuxtLink>
+                <NuxtLink to="/pricing/" :class="{ active: $route.path === '/pricing/' }">Pricing</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/about" :class="{ active: $route.path === '/about' }">About</NuxtLink>
+                <NuxtLink to="/about/" :class="{ active: $route.path === '/about/' }">About</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/contact" :class="{ active: $route.path === '/contact' }">Contact</NuxtLink>
+                <NuxtLink to="/contact/" :class="{ active: $route.path === '/contact/' }">Contact</NuxtLink>
               </li>
             </ul>
           </nav>
@@ -157,73 +157,73 @@
                   <li class="mobile-mega-section">
                     <span class="mobile-mega-title">App & Web Development</span>
                     <ul class="mobile-mega-sub">
-                      <li><NuxtLink to="/services/corporate-app" @click="toggleMobileMenu">Corporate Web App</NuxtLink></li>
-                      <li><NuxtLink to="/services/ecommerce-systems" @click="toggleMobileMenu">E-Commerce Systems</NuxtLink></li>
-                      <li><NuxtLink to="/services/premium-web-apps" @click="toggleMobileMenu">Premium Web Apps</NuxtLink></li>
-                      <li><NuxtLink to="/services/mobile-applications" @click="toggleMobileMenu">Mobile Applications</NuxtLink></li>
-                      <li><NuxtLink to="/services/app-maintenance" @click="toggleMobileMenu">App Maintenance</NuxtLink></li>
-                      <li><NuxtLink to="/services/fintech-app" @click="toggleMobileMenu">Fintech App</NuxtLink></li>
+                      <li><NuxtLink to="/services/corporate-app/" @click="toggleMobileMenu">Corporate Web App</NuxtLink></li>
+                      <li><NuxtLink to="/services/ecommerce-systems/" @click="toggleMobileMenu">E-Commerce Systems</NuxtLink></li>
+                      <li><NuxtLink to="/services/premium-web-apps/" @click="toggleMobileMenu">Premium Web Apps</NuxtLink></li>
+                      <li><NuxtLink to="/services/mobile-applications/" @click="toggleMobileMenu">Mobile Applications</NuxtLink></li>
+                      <li><NuxtLink to="/services/app-maintenance/" @click="toggleMobileMenu">App Maintenance</NuxtLink></li>
+                      <li><NuxtLink to="/services/fintech-app/" @click="toggleMobileMenu">Fintech App</NuxtLink></li>
                     </ul>
                   </li>
                   
                   <li class="mobile-mega-section">
                     <span class="mobile-mega-title">Graphic Design</span>
                     <ul class="mobile-mega-sub">
-                      <li><NuxtLink to="/services/graphic-design" @click="toggleMobileMenu">Logo Design</NuxtLink></li>
-                      <li><NuxtLink to="/services/graphic-design" @click="toggleMobileMenu">Business Cards</NuxtLink></li>
-                      <li><NuxtLink to="/services/graphic-design" @click="toggleMobileMenu">Brochures & Flyers</NuxtLink></li>
-                      <li><NuxtLink to="/services/graphic-design" @click="toggleMobileMenu">Banners & Posters</NuxtLink></li>
-                      <li><NuxtLink to="/services/graphic-design" @click="toggleMobileMenu">Music Cover Art</NuxtLink></li>
-                      <li><NuxtLink to="/services/graphic-design" @click="toggleMobileMenu">Branding</NuxtLink></li>
+                      <li><NuxtLink to="/services/graphic-design/" @click="toggleMobileMenu">Logo Design</NuxtLink></li>
+                      <li><NuxtLink to="/services/graphic-design/" @click="toggleMobileMenu">Business Cards</NuxtLink></li>
+                      <li><NuxtLink to="/services/graphic-design/" @click="toggleMobileMenu">Brochures & Flyers</NuxtLink></li>
+                      <li><NuxtLink to="/services/graphic-design/" @click="toggleMobileMenu">Banners & Posters</NuxtLink></li>
+                      <li><NuxtLink to="/services/graphic-design/" @click="toggleMobileMenu">Music Cover Art</NuxtLink></li>
+                      <li><NuxtLink to="/services/graphic-design/" @click="toggleMobileMenu">Branding</NuxtLink></li>
                     </ul>
                   </li>
                   
                   <li class="mobile-mega-section">
                     <span class="mobile-mega-title">Networking</span>
                     <ul class="mobile-mega-sub">
-                      <li><NuxtLink to="/services/networking" @click="toggleMobileMenu">Office Networking</NuxtLink></li>
-                      <li><NuxtLink to="/services/networking" @click="toggleMobileMenu">Wireless Setup</NuxtLink></li>
-                      <li><NuxtLink to="/services/networking" @click="toggleMobileMenu">Workstation Installation</NuxtLink></li>
-                      <li><NuxtLink to="/services/networking" @click="toggleMobileMenu">Server Configuration</NuxtLink></li>
-                      <li><NuxtLink to="/services/networking" @click="toggleMobileMenu">CCTV Installation</NuxtLink></li>
-                      <li><NuxtLink to="/services/networking" @click="toggleMobileMenu">Network Security</NuxtLink></li>
+                      <li><NuxtLink to="/services/networking/" @click="toggleMobileMenu">Office Networking</NuxtLink></li>
+                      <li><NuxtLink to="/services/networking/" @click="toggleMobileMenu">Wireless Setup</NuxtLink></li>
+                      <li><NuxtLink to="/services/networking/" @click="toggleMobileMenu">Workstation Installation</NuxtLink></li>
+                      <li><NuxtLink to="/services/networking/" @click="toggleMobileMenu">Server Configuration</NuxtLink></li>
+                      <li><NuxtLink to="/services/networking/" @click="toggleMobileMenu">CCTV Installation</NuxtLink></li>
+                      <li><NuxtLink to="/services/networking/" @click="toggleMobileMenu">Network Security</NuxtLink></li>
                     </ul>
                   </li>
                   
                   <li class="mobile-mega-section">
                     <span class="mobile-mega-title">Printing</span>
                     <ul class="mobile-mega-sub">
-                      <li><NuxtLink to="/services/printing" @click="toggleMobileMenu">Flyers & Handbills</NuxtLink></li>
-                      <li><NuxtLink to="/services/printing" @click="toggleMobileMenu">Flex Banners</NuxtLink></li>
-                      <li><NuxtLink to="/services/printing" @click="toggleMobileMenu">Roll-up Stands</NuxtLink></li>
-                      <li><NuxtLink to="/services/printing" @click="toggleMobileMenu">Business Cards</NuxtLink></li>
-                      <li><NuxtLink to="/services/printing" @click="toggleMobileMenu">Posters</NuxtLink></li>
-                      <li><NuxtLink to="/services/printing" @click="toggleMobileMenu">Promotional Items</NuxtLink></li>
+                      <li><NuxtLink to="/services/printing/" @click="toggleMobileMenu">Flyers & Handbills</NuxtLink></li>
+                      <li><NuxtLink to="/services/printing/" @click="toggleMobileMenu">Flex Banners</NuxtLink></li>
+                      <li><NuxtLink to="/services/printing/" @click="toggleMobileMenu">Roll-up Stands</NuxtLink></li>
+                      <li><NuxtLink to="/services/printing/" @click="toggleMobileMenu">Business Cards</NuxtLink></li>
+                      <li><NuxtLink to="/services/printing/" @click="toggleMobileMenu">Posters</NuxtLink></li>
+                      <li><NuxtLink to="/services/printing/" @click="toggleMobileMenu">Promotional Items</NuxtLink></li>
                     </ul>
                   </li>
                   
                   <li class="mobile-mega-section">
                     <span class="mobile-mega-title">Social Media</span>
                     <ul class="mobile-mega-sub">
-                      <li><NuxtLink to="/services/social-media-management" @click="toggleMobileMenu">Content Creation</NuxtLink></li>
-                      <li><NuxtLink to="/services/social-media-management" @click="toggleMobileMenu">SEO Optimization</NuxtLink></li>
-                      <li><NuxtLink to="/services/social-media-management" @click="toggleMobileMenu">Community Management</NuxtLink></li>
-                      <li><NuxtLink to="/services/social-media-management" @click="toggleMobileMenu">Ad Campaigns</NuxtLink></li>
-                      <li><NuxtLink to="/services/social-media-management" @click="toggleMobileMenu">Analytics</NuxtLink></li>
-                      <li><NuxtLink to="/services/social-media-management" @click="toggleMobileMenu">Strategy</NuxtLink></li>
+                      <li><NuxtLink to="/services/social-media-management/" @click="toggleMobileMenu">Content Creation</NuxtLink></li>
+                      <li><NuxtLink to="/services/social-media-management/" @click="toggleMobileMenu">SEO Optimization</NuxtLink></li>
+                      <li><NuxtLink to="/services/social-media-management/" @click="toggleMobileMenu">Community Management</NuxtLink></li>
+                      <li><NuxtLink to="/services/social-media-management/" @click="toggleMobileMenu">Ad Campaigns</NuxtLink></li>
+                      <li><NuxtLink to="/services/social-media-management/" @click="toggleMobileMenu">Analytics</NuxtLink></li>
+                      <li><NuxtLink to="/services/social-media-management/" @click="toggleMobileMenu">Strategy</NuxtLink></li>
                     </ul>
                   </li>
                 </ul>
               </li>
               
               <li>
-                <NuxtLink to="/pricing" @click="toggleMobileMenu">Pricing</NuxtLink>
+                <NuxtLink to="/pricing/" @click="toggleMobileMenu">Pricing</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/about" @click="toggleMobileMenu">About</NuxtLink>
+                <NuxtLink to="/about/" @click="toggleMobileMenu">About</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/contact" @click="toggleMobileMenu">Contact</NuxtLink>
+                <NuxtLink to="/contact/" @click="toggleMobileMenu">Contact</NuxtLink>
               </li>
               <li>
                 <a href="/#domain-section" class="mobile-cta" @click="toggleMobileMenu">Get Started</a>
@@ -236,7 +236,7 @@
           <h4>Contact Us</h4>
           <div class="single-contact">
             <div class="text">
-              <p>Shop E35 Murg Plaza, Area 10 UTC, Abuja</p>
+              <p>D Pauli, Odili Cluster, River Park Estate, Abuja, Nigeria</p>
             </div>
           </div>
           <div class="single-contact">
@@ -244,15 +244,20 @@
               <a href="mailto:info@yemars.ng">info@yemars.ng</a>
             </div>
           </div>
+          <div class="single-contact">
+            <div class="text">
+              <a href="tel:+2349014488190">+234 901 448 8190</a>
+            </div>
+          </div>
         </div>
 
         <div class="yemars-offcanvas-social">
           <h4>Follow Us</h4>
           <div class="social-links">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/yemarstech" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/yemarstech" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/yemars-technology" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/yemarstech" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
           </div>
         </div>
       </div>
@@ -537,7 +542,7 @@ onUnmounted(() => {
 }
 
 .mobile-cta-header {
-  display: none; /* Hidden by default, shown on mobile */
+  display: none;
   background: linear-gradient(45deg, #0055FF, #6A0DAD);
   color: white;
   padding: 8px 16px;
@@ -555,7 +560,7 @@ onUnmounted(() => {
   cursor: pointer;
   color: white;
   padding: 5px;
-  display: none; /* Hidden on desktop, shown on mobile */
+  display: none;
 }
 
 .header-sticky .mobile-toggle {
@@ -719,6 +724,7 @@ onUnmounted(() => {
   color: #666;
   text-decoration: none;
   font-size: 14px;
+  line-height: 1.6;
 }
 
 .yemars-offcanvas-social {
@@ -790,16 +796,16 @@ onUnmounted(() => {
 /* ===== Responsive ===== */
 @media (max-width: 991.98px) {
   .desktop-nav {
-    display: none; /* Hide entire desktop nav on mobile/tablet */
+    display: none;
   }
   .desktop-cta {
-    display: none !important; /* Hide large desktop CTA */
+    display: none !important;
   }
   .mobile-cta-header {
-    display: inline-flex; /* Show small mobile CTA */
+    display: inline-flex;
   }
   .mobile-toggle {
-    display: block; /* Show hamburger */
+    display: block;
   }
   .header-actions {
     justify-content: flex-end;
